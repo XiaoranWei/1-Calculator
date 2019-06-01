@@ -1,19 +1,432 @@
 package com.example.onecalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.View;
-import android.app.Activity;
-
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+
+import org.w3c.dom.Text;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private static final String TAG = "MainActivity" ;
+    private TextView result;
+    private TextView clear;
+    private TextView pn;
+    private TextView divide;
+    private TextView percent;
+    private TextView seven;
+    private TextView eight;
+    private TextView nine;
+    private TextView time;
+    private TextView four;
+    private TextView five;
+    private TextView six;
+    private TextView minus;
+    private TextView one;
+    private TextView two;
+    private TextView three;
+    private TextView plus;
+    private TextView zero;
+    private TextView point;
+    private TextView equal;
+
+    boolean empty;
+    double num1,num2,num5,num8;
+    String symbol;
+    private GestureDetector D;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initView();
+        initClick();
+        result.setText("0");
+        D=new GestureDetector(this, new GestureDetector.OnGestureListener() {
+            @Override
+            public boolean onDown(MotionEvent e) {
+                return false;
+            }
+
+            @Override
+            public void onShowPress(MotionEvent e) {
+
+            }
+
+            @Override
+            public boolean onSingleTapUp(MotionEvent e) {
+                return false;
+            }
+
+            @Override
+            public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+                return false;
+            }
+
+            @Override
+            public void onLongPress(MotionEvent e) {
+
+            }
+
+            @Override
+            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+                String s=result.getText().toString();
+                if((e1.getX()-e2.getX())>50||(e2.getX()-e1.getX())>50)
+                {
+                    result.setText(s.substring(0,s.length()-1));
+                }
+                return false;
+            }
+        });
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event)
+    {
+        return D.onTouchEvent(event);
+    }
+
+    private void initView()
+    {
+        result = this.findViewById(R.id.tv_result);
+        clear = this.findViewById(R.id.tv_clear);
+        pn = this.findViewById(R.id.tv_pn);
+        percent = this.findViewById(R.id.tv_percent);
+        divide = this.findViewById(R.id.tv_divide);
+        seven = this.findViewById(R.id.tv_seven);
+        eight = this.findViewById(R.id.tv_eight);
+        nine = this.findViewById(R.id.tv_nine);
+        time = this.findViewById(R.id.tv_time);
+        four = this.findViewById(R.id.tv_four);
+        five = this.findViewById(R.id.tv_five);
+        six = this.findViewById(R.id.tv_six);
+        minus = this.findViewById(R.id.tv_minus);
+        one = this.findViewById(R.id.tv_one);
+        two = this.findViewById(R.id.tv_two);
+        three = this.findViewById(R.id.tv_three);
+        plus = this.findViewById(R.id.tv_plus);
+        zero = this.findViewById(R.id.tv_zero);
+        point = this.findViewById(R.id.tv_point);
+        equal = this.findViewById(R.id.tv_equal);
+    }
+
+    private void initClick()
+    {
+        clear.setOnClickListener(this);
+        pn.setOnClickListener(this);
+        divide.setOnClickListener(this);
+        percent.setOnClickListener(this);
+        seven.setOnClickListener(this);
+        eight.setOnClickListener(this);
+        nine.setOnClickListener(this);
+        time.setOnClickListener(this);
+        four.setOnClickListener(this);
+        five.setOnClickListener(this);
+        six.setOnClickListener(this);
+        minus.setOnClickListener(this);
+        one.setOnClickListener(this);
+        two.setOnClickListener(this);
+        three.setOnClickListener(this);
+        plus.setOnClickListener(this);
+        zero.setOnClickListener(this);
+        point.setOnClickListener(this);
+        equal.setOnClickListener(this);
     }
 
 
+
+    @Override
+    public void onClick(View v) {
+        int id=v.getId();
+        String str=result.getText().toString();
+        switch(id)
+        {
+            case R.id.tv_clear:
+            {
+                if(empty)
+                {
+                    empty=false;
+                }
+                str="";
+                result.setText("0");
+            }
+                break;
+            case R.id.tv_pn:
+            {
+                num5=Double.parseDouble(str);
+                getpositiveornegative();
+            }
+                break;
+            case R.id.tv_percent:
+            {
+                num8=Double.parseDouble(str);
+                getpercent();
+            }
+                break;
+            case R.id.tv_divide:
+            {
+                num1=Double.parseDouble(str);
+                symbol="÷";
+                result.setText("");
+            }
+                break;
+            case R.id.tv_seven:
+            {
+                if(empty)
+                {
+                    empty=false;
+                    str = "";
+                    result.setText("");
+                }
+                if(result.getText()=="0")
+                {
+                    result.setText(((TextView)v).getText());
+                }
+                else
+                    result.setText(str+((TextView)v).getText());
+            }
+                break;
+            case R.id.tv_eight:
+            {
+                if(empty)
+                {
+                    empty=false;
+                    str = "";
+                    result.setText("");
+                }
+                if(result.getText()=="0")
+                {
+                    result.setText(((TextView)v).getText());
+                }
+                else
+                    result.setText(str+((TextView)v).getText());
+            }
+                break;
+            case R.id.tv_nine:
+            {
+                if(empty)
+                {
+                    empty=false;
+                    str = "";
+                    result.setText("");
+                }
+                if(result.getText()=="0")
+                {
+                    result.setText(((TextView)v).getText());
+                }
+                else
+                    result.setText(str+((TextView)v).getText());
+            }
+                break;
+            case R.id.tv_time:
+            {
+                num1=Double.parseDouble(str);
+                symbol="x";
+                result.setText("");
+            }
+                break;
+            case R.id.tv_four:
+            {
+                if(empty)
+                {
+                    empty=false;
+                    str = "";
+                    result.setText("");
+                }
+                if(result.getText()=="0")
+                {
+                    result.setText(((TextView)v).getText());
+                }
+                else
+                    result.setText(str+((TextView)v).getText());
+            }
+                break;
+            case R.id.tv_five:
+            {
+                if(empty)
+                {
+                    empty=false;
+                    str = "";
+                    result.setText("");
+                }
+                if(result.getText()=="0")
+                {
+                    result.setText(((TextView)v).getText());
+                }
+                else
+                    result.setText(str+((TextView)v).getText());
+            }
+                break;
+            case R.id.tv_six:
+            {
+                if(empty)
+                {
+                    empty=false;
+                    str = "";
+                    result.setText("");
+                }
+                if(result.getText()=="0")
+                {
+                    result.setText(((TextView)v).getText());
+                }
+                else
+                    result.setText(str+((TextView)v).getText());
+            }
+                break;
+            case R.id.tv_minus:
+            {
+                num1=Double.parseDouble(str);
+                symbol="—";
+                result.setText("");
+            }
+                break;
+            case R.id.tv_one:
+            {
+                if(empty)
+                {
+                    empty=false;
+                    str = "";
+                    result.setText("");
+                }
+                if(result.getText()=="0")
+                {
+                    result.setText(((TextView)v).getText());
+                }
+                else
+                    result.setText(str+((TextView)v).getText());
+            }
+                break;
+            case R.id.tv_two: {
+                if(empty)
+                {
+                    empty=false;
+                    str = "";
+                    result.setText("");
+                }
+                if(result.getText()=="0")
+                {
+                    result.setText(((TextView)v).getText());
+                }
+                else
+                    result.setText(str+((TextView)v).getText());
+            }
+                break;
+
+            case R.id.tv_three:
+            {
+                if(empty)
+                {
+                    empty=false;
+                    str = "";
+                    result.setText("");
+                }
+                if(result.getText()=="0")
+                {
+                    result.setText(((TextView)v).getText());
+                }
+                else
+                    result.setText(str+((TextView)v).getText());
+            }
+                break;
+            case R.id.tv_plus:
+            {
+                num1=Double.parseDouble(str);
+                symbol="+";
+                result.setText("");
+            }
+                break;
+            case R.id.tv_zero:
+            {
+                if(empty)
+                {
+                    empty=false;
+                    str = "";
+                    result.setText("");
+                }
+                if(result.getText()=="0")
+                {
+                    result.setText(((TextView)v).getText());
+                }
+                else
+                    result.setText(str+((TextView)v).getText());
+            }
+                break;
+            case R.id.tv_point:
+            {
+                if(empty)
+                {
+                    empty=false;
+                    str = "";
+                    result.setText("");
+                }
+                result.setText(str+((TextView)v).getText());
+            }
+                break;
+            case R.id.tv_equal:
+            {
+                num2=Double.parseDouble(str);
+                getresult();
+            }
+                break;
+        }
+    }
+
+    public void getpositiveornegative()
+    {
+        double num6=0-num5;
+        int num7;
+        if(num6%1==0)
+        {
+            num7=(int)num6;
+            result.setText(""+num7);
+        }
+        else
+            result.setText(""+num6);
+    }
+
+    public void getpercent()
+    {
+        double num9;
+        num9=num8/100;
+        result.setText(""+num9);
+    }
+
+    public void getresult()
+    {
+        double num3;
+        int num4;
+        if(symbol=="÷")
+        {
+            num3=num1/num2;
+        }
+        else if(symbol=="x")
+        {
+            num3=num1*num2;
+        }
+        else if(symbol=="—")
+        {
+            num3=num1-num2;
+        }
+        else if(symbol=="+")
+        {
+            num3=num1+num2;
+        }
+        else
+            num3=0;
+
+        if(num3%1==0)
+        {
+            num4=(int)num3;
+            result.setText(""+num4);
+        }
+        else
+            result.setText(""+num3);
+    }
 }

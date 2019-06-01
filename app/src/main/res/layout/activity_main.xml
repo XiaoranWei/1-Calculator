@@ -7,32 +7,34 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="132dp"
+        android:layout_height="115dp"
         android:orientation="vertical"
         android:background="#000000">
 
         <TextView
+            android:id="@+id/tv_result"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="0"
             android:textColor="#FFFFFF"
-            android:textSize="75sp"
+            android:textSize="50sp"
             android:gravity="right|bottom"
             android:layout_marginRight="15dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="98dp"
         android:background="#000000">
 
         <TextView
+            android:id="@+id/tv_clear"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#BEBEBE"
+        android:background="@drawable/changecolor"
         android:text="AC"
         android:textColor="#000000"
         android:textSize="50sp"
@@ -40,10 +42,11 @@
             android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"/>
         <TextView
+            android:id="@+id/tv_pn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#BEBEBE"
+            android:background="@drawable/changecolor"
             android:text="+/-"
             android:textColor="#000000"
             android:textSize="50sp"
@@ -51,10 +54,11 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"/>
         <TextView
+            android:id="@+id/tv_percent"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#BEBEBE"
+            android:background="@drawable/changecolor"
             android:text="%"
             android:textColor="#000000"
             android:textSize="50sp"
@@ -62,10 +66,11 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"/>
         <TextView
+            android:id="@+id/tv_divide"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FF8000"
+            android:background="@drawable/extrachangecolor"
             android:text="÷"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -79,14 +84,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="98dp"
         android:background="#000000">
 
         <TextView
+            android:id="@+id/tv_seven"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#5B5B5B"
+            android:background="@drawable/exchangecolor"
             android:text="7"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -94,10 +100,11 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"/>
         <TextView
+            android:id="@+id/tv_eight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#5B5B5B"
+            android:background="@drawable/exchangecolor"
             android:text="8"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -105,10 +112,11 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"/>
         <TextView
+            android:id="@+id/tv_nine"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#5B5B5B"
+            android:background="@drawable/exchangecolor"
             android:text="9"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -116,10 +124,11 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"/>
         <TextView
+            android:id="@+id/tv_time"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FF8000"
+            android:background="@drawable/extrachangecolor"
             android:text="x"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -131,14 +140,15 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="98dp"
         android:background="#000000">
 
         <TextView
+            android:id="@+id/tv_four"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#5B5B5B"
+            android:background="@drawable/exchangecolor"
             android:text="4"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -146,10 +156,11 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"/>
         <TextView
+            android:id="@+id/tv_five"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#5B5B5B"
+            android:background="@drawable/exchangecolor"
             android:text="5"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -157,10 +168,11 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"/>
         <TextView
+            android:id="@+id/tv_six"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#5B5B5B"
+            android:background="@drawable/exchangecolor"
             android:text="6"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -168,10 +180,11 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"/>
         <TextView
+            android:id="@+id/tv_minus"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FF8000"
+            android:background="@drawable/extrachangecolor"
             android:text="—"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -183,14 +196,15 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="98dp"
         android:background="#000000">
 
         <TextView
+            android:id="@+id/tv_one"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#5B5B5B"
+            android:background="@drawable/exchangecolor"
             android:text="1"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -198,10 +212,11 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"/>
         <TextView
+            android:id="@+id/tv_two"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#5B5B5B"
+            android:background="@drawable/exchangecolor"
             android:text="2"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -209,10 +224,11 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"/>
         <TextView
+            android:id="@+id/tv_three"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#5B5B5B"
+            android:background="@drawable/exchangecolor"
             android:text="3"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -220,10 +236,11 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"/>
         <TextView
+            android:id="@+id/tv_plus"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FF8000"
+            android:background="@drawable/extrachangecolor"
             android:text="+"
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -235,26 +252,28 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="98dp"
         android:background="#000000">
 
 
         <TextView
+            android:id="@+id/tv_zero"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="2"
-            android:background="#5B5B5B"
+            android:background="@drawable/exchangecolor"
             android:gravity="center"
             android:text="0"
             android:textColor="#FFFFFF"
             android:textSize="50sp" />
         <TextView
+            android:id="@+id/tv_point"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#5B5B5B"
+            android:background="@drawable/exchangecolor"
             android:text="."
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -262,10 +281,11 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"/>
         <TextView
+            android:id="@+id/tv_equal"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FF8000"
+            android:background="@drawable/extrachangecolor"
             android:text="="
             android:textColor="#FFFFFF"
             android:textSize="50sp"
@@ -275,8 +295,5 @@
             android:layout_marginRight="10dp"/>
 
     </LinearLayout>
-
-
-
 
 </LinearLayout>
