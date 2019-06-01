@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String TAG = "MainActivity" ;
     private TextView result;
     private TextView clear;
-    private TextView pn;
+    private TextView positiveornegative;
     private TextView divide;
     private TextView percent;
     private TextView seven;
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     boolean empty;
     double num1,num2,num5,num8;
     String symbol;
-    private GestureDetector D;
+    private GestureDetector Detector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initView();
         initClick();
         result.setText("0");
-        D=new GestureDetector(this, new GestureDetector.OnGestureListener() {
+        Detector=new GestureDetector(this, new GestureDetector.OnGestureListener() {
             @Override
             public boolean onDown(MotionEvent e) {
                 return false;
@@ -90,14 +90,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public boolean onTouchEvent(MotionEvent event)
     {
-        return D.onTouchEvent(event);
+        return Detector.onTouchEvent(event);
     }
 
     private void initView()
     {
         result = this.findViewById(R.id.tv_result);
         clear = this.findViewById(R.id.tv_clear);
-        pn = this.findViewById(R.id.tv_pn);
+        positiveornegative = this.findViewById(R.id.tv_positiveornegative);
         percent = this.findViewById(R.id.tv_percent);
         divide = this.findViewById(R.id.tv_divide);
         seven = this.findViewById(R.id.tv_seven);
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initClick()
     {
         clear.setOnClickListener(this);
-        pn.setOnClickListener(this);
+        positiveornegative.setOnClickListener(this);
         divide.setOnClickListener(this);
         percent.setOnClickListener(this);
         seven.setOnClickListener(this);
@@ -158,23 +158,101 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 result.setText("0");
             }
                 break;
-            case R.id.tv_pn:
+            case R.id.tv_positiveornegative:
             {
-                num5=Double.parseDouble(str);
-                getpositiveornegative();
+                if(result.getText()=="")
+                {
+                    result.setText("please restart");
+                }
+               else if(result.getText()=="click \"+\" twice, please restart")
+            {
+                result.setText("please restart");
+            }
+            else if(result.getText()=="click \"—\" twice, please restart")
+            {
+                result.setText("please restart");
+            }
+            else if(result.getText()=="click \"x\" twice, please restart")
+            {
+                result.setText("please restart");
+            }
+            else if(result.getText()=="click \"÷\" twice, please restart")
+            {
+                result.setText("please restart");
+            }
+            else if(result.getText()=="please restart")
+            {
+                result.setText("please restart");
+            }
+                else {
+                    num5 = Double.parseDouble(str);
+                    getPositiveornegative();
+                }
             }
                 break;
             case R.id.tv_percent:
             {
-                num8=Double.parseDouble(str);
-                getpercent();
+                if(result.getText()=="")
+                {
+                    result.setText("please restart");
+                }
+               else if(result.getText()=="click \"+\" twice, please restart")
+            {
+                result.setText("please restart");
+            }
+            else if(result.getText()=="click \"—\" twice, please restart")
+            {
+                result.setText("please restart");
+            }
+            else if(result.getText()=="click \"x\" twice, please restart")
+            {
+                result.setText("please restart");
+            }
+            else if(result.getText()=="click \"÷\" twice, please restart")
+            {
+                result.setText("please restart");
+            }
+            else if(result.getText()=="please restart")
+            {
+                result.setText("please restart");
+            }
+                else {
+                    num8 = Double.parseDouble(str);
+                    getPercent();
+                }
             }
                 break;
             case R.id.tv_divide:
             {
-                num1=Double.parseDouble(str);
-                symbol="÷";
-                result.setText("");
+                if(result.getText()=="")
+                {
+                    result.setText("click \"÷\" twice, please restart");
+                }
+                else if(result.getText()=="click \"+\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="click \"—\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="click \"x\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="click \"÷\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()!="") {
+                    num1 = Double.parseDouble(str);
+                    symbol = "÷";
+                    result.setText("");
+                }
             }
                 break;
             case R.id.tv_seven:
@@ -227,9 +305,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_time:
             {
-                num1=Double.parseDouble(str);
-                symbol="x";
-                result.setText("");
+                if(result.getText()=="")
+                {
+                    result.setText("click \"x\" twice, please restart");
+                }
+                else if(result.getText()=="click \"+\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="click \"—\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="click \"x\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="click \"÷\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()!="") {
+                    num1 = Double.parseDouble(str);
+                    symbol = "x";
+                    result.setText("");
+                }
             }
                 break;
             case R.id.tv_four:
@@ -282,9 +386,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_minus:
             {
-                num1=Double.parseDouble(str);
-                symbol="—";
-                result.setText("");
+                if(result.getText()=="")
+                {
+                    result.setText("click \"—\" twice, please restart");
+                }
+                else if(result.getText()=="click \"+\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="click \"—\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="click \"x\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="click \"÷\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()!="") {
+                    num1 = Double.parseDouble(str);
+                    symbol = "—";
+                    result.setText("");
+                }
             }
                 break;
             case R.id.tv_one:
@@ -337,9 +467,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_plus:
             {
-                num1=Double.parseDouble(str);
-                symbol="+";
-                result.setText("");
+                if(result.getText()=="")
+                {
+                    result.setText("click \"+\" twice, please restart");
+                }
+                else if(result.getText()=="click \"+\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="click \"—\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="click \"x\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="click \"÷\" twice, please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()=="please restart")
+                {
+                    result.setText("please restart");
+                }
+                else if(result.getText()!=""){
+                    num1 = Double.parseDouble(str);
+                    symbol = "+";
+                    result.setText("");
+                }
             }
                 break;
             case R.id.tv_zero:
@@ -371,14 +527,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_equal:
             {
-                num2=Double.parseDouble(str);
-                getresult();
+                if(result.getText()=="click \"+\" twice, please restart")
+            {
+                result.setText("please restart");
+            }
+            else if(result.getText()=="click \"—\" twice, please restart")
+            {
+                result.setText("please restart");
+            }
+            else if(result.getText()=="click \"x\" twice, please restart")
+            {
+                result.setText("please restart");
+            }
+            else if(result.getText()=="click \"÷\" twice, please restart")
+            {
+                result.setText("please restart");
+            }
+            else if(result.getText()=="please restart")
+            {
+                result.setText("please restart");
+            }
+            else {
+                    num2 = Double.parseDouble(str);
+                    getResult();
+                }
             }
                 break;
         }
     }
 
-    public void getpositiveornegative()
+    public void getPositiveornegative()
     {
         double num6=0-num5;
         int num7;
@@ -391,14 +569,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             result.setText(""+num6);
     }
 
-    public void getpercent()
+    public void getPercent()
     {
         double num9;
         num9=num8/100;
         result.setText(""+num9);
     }
 
-    public void getresult()
+    public void getResult()
     {
         double num3;
         int num4;
