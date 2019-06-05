@@ -37,7 +37,7 @@
         android:background="@drawable/landscopecolor"
         android:text="1/x"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -49,7 +49,7 @@
         android:background="@drawable/landscopecolor"
         android:text="x²"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -61,7 +61,7 @@
         android:background="@drawable/landscopecolor"
         android:text="x³"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -73,7 +73,7 @@
         android:background="@drawable/landscopecolor"
         android:text="xⁿ"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -85,7 +85,7 @@
         android:background="@drawable/changecolor"
         android:text="C"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -97,7 +97,7 @@
         android:background="@drawable/changecolor"
         android:text="+/-"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -109,7 +109,7 @@
         android:background="@drawable/changecolor"
         android:text="%"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -121,7 +121,7 @@
         android:background="@drawable/extrachangecolor"
         android:text="÷"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
@@ -141,7 +141,7 @@
         android:background="@drawable/landscopecolor"
         android:text="x!"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -153,7 +153,7 @@
         android:background="@drawable/landscopecolor"
         android:text="²√x"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -165,7 +165,7 @@
         android:background="@drawable/landscopecolor"
         android:text="³√x"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -177,7 +177,7 @@
         android:background="@drawable/landscopecolor"
         android:text="ⁿ√x"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -189,7 +189,7 @@
         android:background="@drawable/changecolor"
         android:text="7"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -201,7 +201,7 @@
         android:background="@drawable/changecolor"
         android:text="8"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -213,7 +213,7 @@
         android:background="@drawable/changecolor"
         android:text="9"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -225,7 +225,7 @@
         android:background="@drawable/extrachangecolor"
         android:text="x"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
@@ -245,7 +245,7 @@
         android:background="@drawable/landscopecolor"
         android:text="π"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -257,7 +257,7 @@
         android:background="@drawable/landscopecolor"
         android:text="sin"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -269,7 +269,7 @@
         android:background="@drawable/landscopecolor"
         android:text="cos"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -281,7 +281,7 @@
         android:background="@drawable/landscopecolor"
         android:text="tan"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -293,7 +293,7 @@
         android:background="@drawable/changecolor"
         android:text="4"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -305,7 +305,7 @@
         android:background="@drawable/changecolor"
         android:text="5"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -317,7 +317,7 @@
         android:background="@drawable/changecolor"
         android:text="6"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -329,7 +329,7 @@
         android:background="@drawable/extrachangecolor"
         android:text="—"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
@@ -349,7 +349,7 @@
         android:background="@drawable/landscopecolor"
         android:text="e"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -361,7 +361,7 @@
         android:background="@drawable/landscopecolor"
         android:text="sin-¹"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -373,7 +373,7 @@
         android:background="@drawable/landscopecolor"
         android:text="cos-¹"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -385,7 +385,7 @@
         android:background="@drawable/landscopecolor"
         android:text="tan-¹"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -397,7 +397,7 @@
         android:background="@drawable/changecolor"
         android:text="1"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -409,7 +409,7 @@
         android:background="@drawable/changecolor"
         android:text="2"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -421,7 +421,7 @@
         android:background="@drawable/changecolor"
         android:text="3"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -433,7 +433,7 @@
         android:background="@drawable/extrachangecolor"
         android:text="+"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
@@ -453,7 +453,7 @@
         android:background="@drawable/landscopecolor"
         android:text="eˣ"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -465,7 +465,7 @@
         android:background="@drawable/landscopecolor"
         android:text="10ˣ"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -477,7 +477,7 @@
         android:background="@drawable/landscopecolor"
         android:text="㏒ₗₒ"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -489,7 +489,7 @@
         android:background="@drawable/landscopecolor"
         android:text="㏑"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
@@ -501,7 +501,7 @@
         android:background="@drawable/changecolor"
         android:text="0"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginLeft="5dp"/>
     <TextView
@@ -512,7 +512,7 @@
         android:background="@drawable/changecolor"
         android:text="."
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginLeft="5dp"/>
     <TextView
@@ -523,7 +523,7 @@
         android:background="@drawable/extrachangecolor"
         android:text="="
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="10sp"
         android:gravity="center"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"/>
