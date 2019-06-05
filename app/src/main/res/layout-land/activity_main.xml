@@ -234,9 +234,9 @@
 
   <LinearLayout
       android:background="#000000"
-  android:layout_weight="1"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content">
+      android:layout_weight="1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
     <TextView
         android:id="@+id/tv_pi"
         android:layout_width="0dp"
@@ -250,7 +250,7 @@
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
     <TextView
-        android:id="@+id/tv_sinx"
+        android:id="@+id/tv_sin"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -262,7 +262,7 @@
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
     <TextView
-        android:id="@+id/tv_cosx"
+        android:id="@+id/tv_cos"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -274,7 +274,7 @@
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
     <TextView
-        android:id="@+id/tv_tanx"
+        android:id="@+id/tv_tan"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -342,7 +342,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content">
     <TextView
-        android:id="@+id/tv_e"
+        android:id="@+id/tv_ee"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -458,7 +458,7 @@
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
     <TextView
-        android:id="@+id/tv_10powerx"
+        android:id="@+id/tv_tenpowerx"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -470,7 +470,7 @@
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"/>
     <TextView
-        android:id="@+id/tv_log10"
+        android:id="@+id/tv_logten"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"

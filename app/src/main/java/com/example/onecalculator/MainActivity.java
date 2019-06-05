@@ -45,13 +45,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    int orientation = getResources().getConfiguration().orientation;
-    if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-      setContentView(R.layout.activity_main2);
-    }
-    else if(orientation == Configuration.ORIENTATION_PORTRAIT) {
       setContentView(R.layout.activity_main);
-    }
+
     initView();
     initClick();
     result.setText("0");
@@ -114,16 +109,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     return Detector.onTouchEvent(event);
   }
 
-  @Override
-  public void onConfigurationChanged (Configuration newConfig){
+  @Override public void onConfigurationChanged (Configuration newConfig){
     super.onConfigurationChanged(newConfig);
-    int newCurrentOrientation = getResources().getConfiguration().orientation;
-    if ( newCurrentOrientation == Configuration.ORIENTATION_PORTRAIT ) {
-      setContentView(R.layout.activity_main2);
-    }else if( newCurrentOrientation == Configuration.ORIENTATION_LANDSCAPE ) {
-      setContentView(R.layout.activity_main);
-    }
-    }
+    setContentView(R.layout.activity_main);
+    initView();
+    initClick();
+    result.setText("0");
+  }
 
 
 
