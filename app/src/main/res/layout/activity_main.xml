@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
   <LinearLayout
+      android:layout_weight="1"
       android:layout_width="match_parent"
       android:layout_height="115dp"
       android:orientation="vertical"
@@ -18,12 +19,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="65sp"
         android:gravity="right|bottom"
         android:layout_marginRight="15dp"/>
   </LinearLayout>
 
   <LinearLayout
+      android:layout_weight="1"
       android:layout_width="match_parent"
       android:layout_height="98dp"
       android:background="#000000">
@@ -34,9 +36,9 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@drawable/changecolor"
-        android:text="AC"
+        android:text="C"
         android:textColor="#000000"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"/>
@@ -48,7 +50,7 @@
         android:background="@drawable/changecolor"
         android:text="+/-"
         android:textColor="#000000"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"/>
@@ -60,7 +62,7 @@
         android:background="@drawable/changecolor"
         android:text="%"
         android:textColor="#000000"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"/>
@@ -72,7 +74,7 @@
         android:background="@drawable/extrachangecolor"
         android:text="÷"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
@@ -82,6 +84,7 @@
 
 
   <LinearLayout
+      android:layout_weight="1"
       android:layout_width="match_parent"
       android:layout_height="98dp"
       android:background="#000000">
@@ -94,7 +97,7 @@
         android:background="@drawable/exchangecolor"
         android:text="7"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"/>
@@ -106,7 +109,7 @@
         android:background="@drawable/exchangecolor"
         android:text="8"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"/>
@@ -118,7 +121,7 @@
         android:background="@drawable/exchangecolor"
         android:text="9"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"/>
@@ -130,7 +133,7 @@
         android:background="@drawable/extrachangecolor"
         android:text="x"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
@@ -138,6 +141,7 @@
 
   </LinearLayout>
   <LinearLayout
+      android:layout_weight="1"
       android:layout_width="match_parent"
       android:layout_height="98dp"
       android:background="#000000">
@@ -150,7 +154,7 @@
         android:background="@drawable/exchangecolor"
         android:text="4"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"/>
@@ -162,7 +166,7 @@
         android:background="@drawable/exchangecolor"
         android:text="5"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"/>
@@ -174,7 +178,7 @@
         android:background="@drawable/exchangecolor"
         android:text="6"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"/>
@@ -186,7 +190,7 @@
         android:background="@drawable/extrachangecolor"
         android:text="—"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
@@ -194,6 +198,7 @@
 
   </LinearLayout>
   <LinearLayout
+      android:layout_weight="1"
       android:layout_width="match_parent"
       android:layout_height="98dp"
       android:background="#000000">
@@ -206,7 +211,7 @@
         android:background="@drawable/exchangecolor"
         android:text="1"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"/>
@@ -218,7 +223,7 @@
         android:background="@drawable/exchangecolor"
         android:text="2"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"/>
@@ -230,7 +235,7 @@
         android:background="@drawable/exchangecolor"
         android:text="3"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"/>
@@ -242,7 +247,7 @@
         android:background="@drawable/extrachangecolor"
         android:text="+"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
@@ -250,6 +255,7 @@
 
   </LinearLayout>
   <LinearLayout
+      android:layout_weight="1"
       android:layout_width="match_parent"
       android:layout_height="98dp"
       android:background="#000000">
@@ -266,7 +272,7 @@
         android:gravity="center"
         android:text="0"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"/>
+        android:textSize="25sp"/>
     <TextView
         android:id="@+id/tv_point"
         android:layout_width="0dp"
@@ -287,7 +293,7 @@
         android:background="@drawable/extrachangecolor"
         android:text="="
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"

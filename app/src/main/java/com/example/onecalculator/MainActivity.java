@@ -1,5 +1,6 @@
 package com.example.onecalculator;
 
+import android.content.res.Configuration;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -44,7 +45,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+    int orientation = getResources().getConfiguration().orientation;
+    if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+      setContentView(R.layout.activity_main2);
+    }
+    else if(orientation == Configuration.ORIENTATION_PORTRAIT) {
+      setContentView(R.layout.activity_main);
+    }
     initView();
     initClick();
     result.setText("0");
@@ -88,7 +95,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (result.getText() == "please restart") {
           result.setText("please restart");
         } else if ((e1.getX() - e2.getX()) > 50 || (e2.getX() - e1.getX()) > 50) {
-          result.setText(s.substring(0, s.length() - 1));
+          if (result.getText() == "0") {
+            result.setText("please restart");
+          } else {
+            result.setText(s.substring(0, s.length() - 1));
+          }
+          if (s.length() == 1) {
+            result.setText("0");
+          }
         }
         return false;
       }
@@ -99,6 +113,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   public boolean onTouchEvent(MotionEvent event) {
     return Detector.onTouchEvent(event);
   }
+
+  @Override
+  public void onConfigurationChanged (Configuration newConfig){
+    super.onConfigurationChanged(newConfig);
+    int newCurrentOrientation = getResources().getConfiguration().orientation;
+    if ( newCurrentOrientation == Configuration.ORIENTATION_PORTRAIT ) {
+      setContentView(R.layout.activity_main2);
+    }else if( newCurrentOrientation == Configuration.ORIENTATION_LANDSCAPE ) {
+      setContentView(R.layout.activity_main);
+    }
+    }
+
+
 
   private void initView() {
     result = this.findViewById(R.id.tv_result);
