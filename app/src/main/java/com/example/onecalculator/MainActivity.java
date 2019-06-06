@@ -36,16 +36,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   private TextView zero;
   private TextView point;
   private TextView equal;
+  private TextView onedividex;
+  private TextView xsquare;
+  private TextView xcube;
+  private TextView xpowern;
+  private TextView xex;
+  private TextView squarerootx;
+  private TextView cuberootx;
+  private TextView nrootx;
+  private TextView pi;
+  private TextView sin;
+  private TextView cos;
+  private TextView tan;
+  private TextView ee;
+  private TextView arcsin;
+  private TextView arccos;
+  private TextView arctan;
+  private TextView epowerx;
+  private TextView tenpowerx;
+  private TextView logten;
+  private TextView ln;
 
   boolean empty;
-  double num1, num2, num5, num8;
+  double num1, num2, num5, num8, num10, num13, num16, num19;
+  int num20;
   String symbol;
   private GestureDetector Detector;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_main);
+    setContentView(R.layout.activity_main);
 
     initView();
     initClick();
@@ -109,15 +130,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     return Detector.onTouchEvent(event);
   }
 
-  @Override public void onConfigurationChanged (Configuration newConfig){
+  @Override public void onConfigurationChanged(Configuration newConfig) {
     super.onConfigurationChanged(newConfig);
     setContentView(R.layout.activity_main);
-    initView();
-    initClick();
+    if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+      initView();
+      initClick();
+      inView();
+      inClick();
+    } else if (getResources().getConfiguration().orientation
+        == Configuration.ORIENTATION_PORTRAIT) {
+      initView();
+      initClick();
+    }
     result.setText("0");
   }
-
-
 
   private void initView() {
     result = this.findViewById(R.id.tv_result);
@@ -164,11 +191,78 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     equal.setOnClickListener(this);
   }
 
+  private void inView() {
+    onedividex = this.findViewById(R.id.tv_onedividex);
+    xsquare = this.findViewById(R.id.tv_xsquare);
+    xcube = this.findViewById(R.id.tv_xcube);
+    xpowern = this.findViewById(R.id.tv_xpowern);
+    xex = this.findViewById(R.id.tv_xex);
+    squarerootx = this.findViewById(R.id.tv_squarerootx);
+    cuberootx = this.findViewById(R.id.tv_cuberootx);
+    nrootx = this.findViewById(R.id.tv_nrootx);
+    pi = this.findViewById(R.id.tv_pi);
+    sin = this.findViewById(R.id.tv_sin);
+    cos = this.findViewById(R.id.tv_cos);
+    tan = this.findViewById(R.id.tv_tan);
+    ee = this.findViewById(R.id.tv_ee);
+    arcsin = this.findViewById(R.id.tv_arcsin);
+    arccos = this.findViewById(R.id.tv_arccos);
+    arctan = this.findViewById(R.id.tv_arctan);
+    epowerx = this.findViewById(R.id.tv_epowerx);
+    tenpowerx = this.findViewById(R.id.tv_tenpowerx);
+    logten = this.findViewById(R.id.tv_logten);
+    ln = this.findViewById(R.id.tv_ln);
+  }
+
+  private void inClick() {
+    onedividex.setOnClickListener(this);
+    xsquare.setOnClickListener(this);
+    xcube.setOnClickListener(this);
+    xpowern.setOnClickListener(this);
+    xex.setOnClickListener(this);
+    squarerootx.setOnClickListener(this);
+    cuberootx.setOnClickListener(this);
+    nrootx.setOnClickListener(this);
+    pi.setOnClickListener(this);
+    sin.setOnClickListener(this);
+    cos.setOnClickListener(this);
+    tan.setOnClickListener(this);
+    ee.setOnClickListener(this);
+    arcsin.setOnClickListener(this);
+    arccos.setOnClickListener(this);
+    arctan.setOnClickListener(this);
+    epowerx.setOnClickListener(this);
+    tenpowerx.setOnClickListener(this);
+    logten.setOnClickListener(this);
+    ln.setOnClickListener(this);
+  }
+
   @Override
   public void onClick(View v) {
     int id = v.getId();
     String str = result.getText().toString();
     switch (id) {
+      case R.id.tv_xex:{
+        num19=Double.parseDouble(str);
+        num20=(int)num19;
+        getXex();
+      }
+      break;
+      case R.id.tv_xcube:{
+        num16=Double.parseDouble(str);
+        getXcube();
+      }
+      break;
+      case R.id.tv_xsquare:{
+        num13=Double.parseDouble(str);
+        getXsquare();
+      }
+      break;
+      case R.id.tv_onedividex: {
+        num10 = Double.parseDouble(str);
+        getOnedividex();
+      }
+      break;
       case R.id.tv_clear: {
         if (empty) {
           empty = false;
@@ -391,6 +485,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
       }
       break;
+    }
+  }
+
+  public void getXex(){
+    int num21 = 1;
+    for(int i=num20;i>0;i--)
+    {
+      num21*=i;
+    }
+    result.setText(""+num21);
+  }
+
+  public void getXcube(){
+    double num17=num16*num16*num16;
+    int num18;
+    if (num17 % 1 == 0) {
+      num18 = (int) num17;
+      result.setText("" + num18);
+    } else {
+      result.setText("" + num17);
+    }
+  }
+
+  public void getXsquare(){
+    double num14=num13*num13;
+    int num15;
+    if (num14 % 1 == 0) {
+      num15 = (int) num14;
+      result.setText("" + num15);
+    } else {
+      result.setText("" + num14);
+    }
+  }
+
+  public void getOnedividex() {
+    double num11 = 1 / num10;
+    int num12;
+    if (num11 % 1 == 0) {
+      num12 = (int) num11;
+      result.setText("" + num12);
+    } else {
+      result.setText("" + num11);
     }
   }
 

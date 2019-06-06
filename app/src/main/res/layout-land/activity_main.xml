@@ -503,7 +503,8 @@
         android:textColor="#FFFFFF"
         android:textSize="10sp"
         android:gravity="center"
-        android:layout_marginLeft="5dp"/>
+        android:layout_marginLeft="7.5dp"
+        android:layout_marginRight="2.5dp"/>
     <TextView
         android:id="@+id/tv_point"
         android:layout_width="0dp"
