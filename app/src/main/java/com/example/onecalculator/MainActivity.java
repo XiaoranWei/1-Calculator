@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   private TextView ln;
 
   boolean empty;
-  double num1, num2, num5, num8, num10, num13, num16, num19;
+  double num1, num2, num5, num8, num10, num13, num16, num19, num21, num24;
   int num20;
   String symbol;
   private GestureDetector Detector;
@@ -100,19 +100,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       @Override
       public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
         String s = result.getText().toString();
-        if (result.getText() == "click \"+\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"—\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"x\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"÷\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "please restart") {
-          result.setText("please restart");
+        if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
         } else if ((e1.getX() - e2.getX()) > 50 || (e2.getX() - e1.getX()) > 50) {
           if (result.getText() == "0") {
-            result.setText("please restart");
+            result.setText("Touch Error Please Restart");
           } else {
             result.setText(s.substring(0, s.length() - 1));
           }
@@ -242,25 +234,100 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int id = v.getId();
     String str = result.getText().toString();
     switch (id) {
-      case R.id.tv_xex:{
-        num19=Double.parseDouble(str);
-        num20=(int)num19;
-        getXex();
+      case R.id.tv_pi:{
+        double num27=Math.PI;
+        result.setText(""+num27);
       }
       break;
-      case R.id.tv_xcube:{
-        num16=Double.parseDouble(str);
-        getXcube();
+      case R.id.tv_nrootx: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() != "") {
+          num1 = Double.parseDouble(str);
+          symbol = "ⁿ√x";
+          result.setText("");
+        }
       }
       break;
-      case R.id.tv_xsquare:{
-        num13=Double.parseDouble(str);
-        getXsquare();
+      case R.id.tv_cuberootx: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num24 = Double.parseDouble(str);
+          getCuberootx();
+        }
+      }
+      break;
+      case R.id.tv_squarerootx: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num21 = Double.parseDouble(str);
+          getSquarerootx();
+        }
+      }
+      break;
+      case R.id.tv_xex: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num19 = Double.parseDouble(str);
+          num20 = (int) num19;
+          getXex();
+        }
+      }
+      break;
+      case R.id.tv_xpowern: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() != "") {
+          num1 = Double.parseDouble(str);
+          symbol = "xⁿ";
+          result.setText("");
+        }
+      }
+      break;
+      case R.id.tv_xcube: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num16 = Double.parseDouble(str);
+          getXcube();
+        }
+      }
+      break;
+      case R.id.tv_xsquare: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num13 = Double.parseDouble(str);
+          getXsquare();
+        }
       }
       break;
       case R.id.tv_onedividex: {
-        num10 = Double.parseDouble(str);
-        getOnedividex();
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num10 = Double.parseDouble(str);
+          getOnedividex();
+        }
       }
       break;
       case R.id.tv_clear: {
@@ -273,17 +340,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_positiveornegative: {
         if (result.getText() == "") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"+\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"—\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"x\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"÷\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "please restart") {
-          result.setText("please restart");
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
         } else {
           num5 = Double.parseDouble(str);
           getPositiveornegative();
@@ -292,17 +351,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_percent: {
         if (result.getText() == "") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"+\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"—\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"x\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"÷\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "please restart") {
-          result.setText("please restart");
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
         } else {
           num8 = Double.parseDouble(str);
           getPercent();
@@ -311,17 +362,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_divide: {
         if (result.getText() == "") {
-          result.setText("click \"÷\" twice, please restart");
-        } else if (result.getText() == "click \"+\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"—\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"x\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"÷\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "please restart") {
-          result.setText("please restart");
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
         } else if (result.getText() != "") {
           num1 = Double.parseDouble(str);
           symbol = "÷";
@@ -338,16 +381,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       case R.id.tv_one:
       case R.id.tv_two:
       case R.id.tv_three: {
-        if (result.getText() == "click \"+\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"—\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"x\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"÷\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "please restart") {
-          result.setText("please restart");
+        if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
         } else {
           if (empty) {
             empty = false;
@@ -364,17 +399,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_time: {
         if (result.getText() == "") {
-          result.setText("click \"x\" twice, please restart");
-        } else if (result.getText() == "click \"+\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"—\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"x\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"÷\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "please restart") {
-          result.setText("please restart");
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
         } else if (result.getText() != "") {
           num1 = Double.parseDouble(str);
           symbol = "x";
@@ -384,17 +411,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_minus: {
         if (result.getText() == "") {
-          result.setText("click \"—\" twice, please restart");
-        } else if (result.getText() == "click \"+\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"—\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"x\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"÷\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "please restart") {
-          result.setText("please restart");
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
         } else if (result.getText() != "") {
           num1 = Double.parseDouble(str);
           symbol = "—";
@@ -404,17 +423,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_plus: {
         if (result.getText() == "") {
-          result.setText("click \"+\" twice, please restart");
-        } else if (result.getText() == "click \"+\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"—\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"x\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"÷\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "please restart") {
-          result.setText("please restart");
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
         } else if (result.getText() != "") {
           num1 = Double.parseDouble(str);
           symbol = "+";
@@ -423,16 +434,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       }
       break;
       case R.id.tv_zero: {
-        if (result.getText() == "click \"+\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"—\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"x\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"÷\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "please restart") {
-          result.setText("please restart");
+        if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
         } else {
           if (empty) {
             empty = false;
@@ -448,16 +451,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       }
       break;
       case R.id.tv_point: {
-        if (result.getText() == "click \"+\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"—\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"x\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"÷\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "please restart") {
-          result.setText("please restart");
+        if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
         } else {
           if (empty) {
             empty = false;
@@ -469,16 +464,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       }
       break;
       case R.id.tv_equal: {
-        if (result.getText() == "click \"+\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"—\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"x\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "click \"÷\" twice, please restart") {
-          result.setText("please restart");
-        } else if (result.getText() == "please restart") {
-          result.setText("please restart");
+        if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
         } else {
           num2 = Double.parseDouble(str);
           getResult();
@@ -488,17 +475,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
   }
 
-  public void getXex(){
-    int num21 = 1;
-    for(int i=num20;i>0;i--)
-    {
-      num21*=i;
+  public void getCuberootx() {
+    double xw = 3;
+    double num25 = Math.pow(num24, 1 / xw);
+    int num26;
+    if (num25 % 1 == 0) {
+      num26 = (int) num25;
+      result.setText("" + num26);
+    } else {
+      result.setText("" + num25);
     }
-    result.setText(""+num21);
   }
 
-  public void getXcube(){
-    double num17=num16*num16*num16;
+  public void getSquarerootx() {
+    double num22 = Math.sqrt(num21);
+    int num23;
+    if (num22 % 1 == 0) {
+      num23 = (int) num22;
+      result.setText("" + num23);
+    } else {
+      result.setText("" + num22);
+    }
+  }
+
+  public void getXex() {
+    int num21 = 1;
+    for (int i = num20; i > 0; i--) {
+      num21 *= i;
+    }
+    result.setText("" + num21);
+  }
+
+  public void getXcube() {
+    double num17 = num16 * num16 * num16;
     int num18;
     if (num17 % 1 == 0) {
       num18 = (int) num17;
@@ -508,8 +517,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
   }
 
-  public void getXsquare(){
-    double num14=num13*num13;
+  public void getXsquare() {
+    double num14 = num13 * num13;
     int num15;
     if (num14 % 1 == 0) {
       num15 = (int) num14;
@@ -548,7 +557,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   }
 
   public void getResult() {
-    double num3;
+    double num3 = 0;
     int num4;
     if (symbol == "÷") {
       num3 = num1 / num2;
@@ -558,10 +567,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       num3 = num1 - num2;
     } else if (symbol == "+") {
       num3 = num1 + num2;
+    } else if (symbol == "xⁿ") {
+      num3 = Math.pow(num1, num2);
+    } else if (symbol == "ⁿ√x") {
+      num3 = Math.pow(num1, 1 / num2);
     } else {
       num3 = 0;
     }
-
     if (num3 % 1 == 0) {
       num4 = (int) num3;
       result.setText("" + num4);
