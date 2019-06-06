@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   private TextView ln;
 
   boolean empty;
-  double num1, num2, num5, num8, num10, num13, num16, num19, num21, num24;
+  double num1, num2, num5, num8, num10, num13, num16, num19, num21, num24, num28, num32, num36,
+      num41, num44, num47, num50, num54, num57, num60;
   int num20;
   String symbol;
   private GestureDetector Detector;
@@ -234,9 +235,124 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int id = v.getId();
     String str = result.getText().toString();
     switch (id) {
-      case R.id.tv_pi:{
-        double num27=Math.PI;
-        result.setText(""+num27);
+      case R.id.tv_ln: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num60 = Double.parseDouble(str);
+          getLn();
+        }
+      }
+      break;
+      case R.id.tv_logten: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num57 = Double.parseDouble(str);
+          getLogten();
+        }
+      }
+      break;
+      case R.id.tv_tenpowerx: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num54 = Double.parseDouble(str);
+          getTenpowerx();
+        }
+      }
+      break;
+      case R.id.tv_epowerx: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num50 = Double.parseDouble(str);
+          getEpowerx();
+        }
+      }
+      break;
+      case R.id.tv_arctan: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num47 = Double.parseDouble(str);
+          getArcTanx();
+        }
+      }
+      break;
+      case R.id.tv_arccos: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num44 = Double.parseDouble(str);
+          getArcCosx();
+        }
+      }
+      break;
+      case R.id.tv_arcsin: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num41 = Double.parseDouble(str);
+          getArcSinx();
+        }
+      }
+      break;
+      case R.id.tv_ee: {
+        double num40 = 2.71828183;
+        result.setText("" + num40);
+      }
+      break;
+      case R.id.tv_tan: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num36 = Double.parseDouble(str);
+          getTanx();
+        }
+      }
+      break;
+      case R.id.tv_cos: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num32 = Double.parseDouble(str);
+          getCosx();
+        }
+      }
+      break;
+      case R.id.tv_sin: {
+        if (result.getText() == "") {
+          result.setText("Touch Error Please Restart");
+        } else if (result.getText() == "Touch Error Please Restart") {
+          result.setText("Touch Error Please Restart");
+        } else {
+          num28 = Double.parseDouble(str);
+          getSinx();
+        }
+      }
+      break;
+      case R.id.tv_pi: {
+        double num27 = Math.PI;
+        result.setText("" + num27);
       }
       break;
       case R.id.tv_nrootx: {
@@ -472,6 +588,120 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
       }
       break;
+    }
+  }
+
+  public void getLn() {
+    double num61 = Math.log(num60);
+    int num62;
+    if (num61 % 1 == 0) {
+      num62 = (int) num61;
+      result.setText("" + num62);
+    } else {
+      result.setText("" + num61);
+    }
+  }
+
+  public void getLogten() {
+    double num58 = Math.log10(num57);
+    int num59;
+    if (num58 % 1 == 0) {
+      num59 = (int) num58;
+      result.setText("" + num59);
+    } else {
+      result.setText("" + num58);
+    }
+  }
+
+  public void getTenpowerx() {
+    double num55 = Math.pow(10, num54);
+    int num56;
+    if (num55 % 1 == 0) {
+      num56 = (int) num55;
+      result.setText("" + num56);
+    } else {
+      result.setText("" + num55);
+    }
+  }
+
+  public void getEpowerx() {
+    double num51 = 2.71828183;
+    double num52 = Math.pow(num51, num50);
+    int num53;
+    if (num52 % 1 == 0) {
+      num53 = (int) num52;
+      result.setText("" + num53);
+    } else {
+      result.setText("" + num52);
+    }
+  }
+
+  public void getArcTanx() {
+    double num48 = Math.toDegrees(Math.atan(num47));
+    int num49;
+    if (num48 % 1 == 0) {
+      num49 = (int) num48;
+      result.setText("" + num49);
+    } else {
+      result.setText("" + num48);
+    }
+  }
+
+  public void getArcCosx() {
+    double num45 = Math.toDegrees(Math.acos(num44));
+    int num46;
+    if (num45 % 1 == 0) {
+      num46 = (int) num45;
+      result.setText("" + num46);
+    } else {
+      result.setText("" + num45);
+    }
+  }
+
+  public void getArcSinx() {
+    double num42 = Math.toDegrees(Math.asin(num41));
+    int num43;
+    if (num42 % 1 == 0) {
+      num43 = (int) num42;
+      result.setText("" + num43);
+    } else {
+      result.setText("" + num42);
+    }
+  }
+
+  public void getTanx() {
+    double num37 = Math.toRadians(num36);
+    double num38 = Math.tan(num37);
+    int num39;
+    if (num38 % 1 == 0) {
+      num39 = (int) num38;
+      result.setText("" + num39);
+    } else {
+      result.setText("" + num38);
+    }
+  }
+
+  public void getCosx() {
+    double num33 = Math.toRadians(num32);
+    double num34 = Math.cos(num33);
+    int num35;
+    if (num34 % 1 == 0) {
+      num35 = (int) num34;
+      result.setText("" + num35);
+    } else {
+      result.setText("" + num34);
+    }
+  }
+
+  public void getSinx() {
+    double num29 = Math.toRadians(num28);
+    double num30 = Math.sin(num29);
+    int num31;
+    if (num30 % 1 == 0) {
+      num31 = (int) num30;
+      result.setText("" + num31);
+    } else {
+      result.setText("" + num30);
     }
   }
 
