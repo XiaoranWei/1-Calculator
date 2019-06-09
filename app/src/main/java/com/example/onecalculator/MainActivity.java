@@ -1,17 +1,15 @@
 package com.example.onecalculator;
 
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -56,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   private TextView tenpowerx;
   private TextView logten;
   private TextView ln;
+
+  private TextView gn;
 
   boolean empty;
   double num1, num2, num5, num8, num10, num13, num16, num19, num21, num24, num28, num32, num36,
@@ -160,6 +160,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     zero = this.findViewById(R.id.tv_zero);
     point = this.findViewById(R.id.tv_point);
     equal = this.findViewById(R.id.tv_equal);
+
+    gn=this.findViewById(R.id.tv_gn);
   }
 
   private void initClick() {
@@ -182,6 +184,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     zero.setOnClickListener(this);
     point.setOnClickListener(this);
     equal.setOnClickListener(this);
+
+    gn.setOnClickListener(this);
   }
 
   private void inView() {
@@ -235,6 +239,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int id = v.getId();
     String str = result.getText().toString();
     switch (id) {
+      case R.id.tv_gn:{
+        Intent intent=new Intent();
+        intent.setClass(MainActivity.this,GongNeng.class);
+        startActivity(intent);
+      }
+      break;
       case R.id.tv_ln: {
         if (result.getText() == "") {
           result.setText("Touch Error Please Restart");
@@ -812,3 +822,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
   }
 }
+
+//4 3 1 4

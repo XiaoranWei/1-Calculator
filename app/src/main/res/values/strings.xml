@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Calculator</string>
-    <drawable name="original">#FF8000</drawable>
-    <drawable name="afterclick">#FFFFFF</drawable>
+  <string name="app_name">Calculator</string>
+  <drawable name="original">#FF8000</drawable>
+  <drawable name="afterclick">#FFFFFF</drawable>
 
-    <drawable name="exoriginal">#5B5B5B</drawable>
-    <drawable name="exafterclick">#FFFFFF</drawable>
+  <drawable name="exoriginal">#5B5B5B</drawable>
+  <drawable name="exafterclick">#FFFFFF</drawable>
 </resources>

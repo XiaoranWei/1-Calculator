@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="color">
+        <item name="android:textColor">@drawable/selector3</item>
+    </style>
+
 </resources>
