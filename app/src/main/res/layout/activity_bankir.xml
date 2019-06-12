@@ -19,48 +19,56 @@
     <TextView
         android:id="@+id/tv_yhlx"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
+        android:layout_weight="1.3"
         android:text="银行利息换算"
         android:textSize="33sp"
-        android:background="#FFFFFF"
+        android:background="#CDDC39"
         android:gravity="center"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:text="请输入你的存款"
-        android:gravity="center"/>
+        android:gravity="center|left"/>
     <EditText
         android:id="@+id/et_money"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:background="#FFFFFF"
         android:gravity="center"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="33dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:text="请输入存款的年数"
-        android:gravity="center"/>
+        android:gravity="center|left"/>
     <EditText
         android:id="@+id/et_year"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:background="#FFFFFF"
         android:gravity="center"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:text="请输入存款的利率(%)"
-        android:gravity="center"/>
+        android:gravity="center|left"/>
     <EditText
         android:id="@+id/et_interestrate"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:background="#FFFFFF"
         android:gravity="center"/>
     <Button
         android:id="@+id/btn_huansuan"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:background="#FF8000"
         android:text="换算"
         android:textSize="33dp"
@@ -68,13 +76,15 @@
     <TextView
         android:id="@+id/tv_answer"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="0dp"
+        android:layout_weight="1.8"
         android:textSize="30dp"
         android:gravity="center"/>
     <Button
         android:id="@+id/btn_restart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:background="#FF8000"
         android:text="重新开始"
         android:textSize="20dp"

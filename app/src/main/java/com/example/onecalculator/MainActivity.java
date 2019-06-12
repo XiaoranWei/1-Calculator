@@ -101,11 +101,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       @Override
       public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
         String s = result.getText().toString();
-        if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+        if (result.getText() == "错误") {
+          result.setText("错误");
         } else if ((e1.getX() - e2.getX()) > 50 || (e2.getX() - e1.getX()) > 50) {
           if (result.getText() == "0") {
-            result.setText("Touch Error Please Restart");
+            result.setText("错误");
           } else {
             result.setText(s.substring(0, s.length() - 1));
           }
@@ -247,9 +247,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_ln: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num60 = Double.parseDouble(str);
           getLn();
@@ -258,9 +258,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_logten: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num57 = Double.parseDouble(str);
           getLogten();
@@ -269,9 +269,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_tenpowerx: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num54 = Double.parseDouble(str);
           getTenpowerx();
@@ -280,9 +280,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_epowerx: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num50 = Double.parseDouble(str);
           getEpowerx();
@@ -291,9 +291,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_arctan: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num47 = Double.parseDouble(str);
           getArcTanx();
@@ -302,9 +302,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_arccos: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num44 = Double.parseDouble(str);
           getArcCosx();
@@ -313,9 +313,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_arcsin: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num41 = Double.parseDouble(str);
           getArcSinx();
@@ -329,9 +329,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_tan: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num36 = Double.parseDouble(str);
           getTanx();
@@ -340,9 +340,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_cos: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num32 = Double.parseDouble(str);
           getCosx();
@@ -351,9 +351,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_sin: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num28 = Double.parseDouble(str);
           getSinx();
@@ -367,9 +367,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_nrootx: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else if (result.getText() != "") {
           num1 = Double.parseDouble(str);
           symbol = "ⁿ√x";
@@ -379,9 +379,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_cuberootx: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num24 = Double.parseDouble(str);
           getCuberootx();
@@ -390,9 +390,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_squarerootx: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num21 = Double.parseDouble(str);
           getSquarerootx();
@@ -401,9 +401,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_xex: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num19 = Double.parseDouble(str);
           num20 = (int) num19;
@@ -413,9 +413,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_xpowern: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else if (result.getText() != "") {
           num1 = Double.parseDouble(str);
           symbol = "xⁿ";
@@ -425,9 +425,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_xcube: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num16 = Double.parseDouble(str);
           getXcube();
@@ -436,9 +436,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_xsquare: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num13 = Double.parseDouble(str);
           getXsquare();
@@ -447,9 +447,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_onedividex: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num10 = Double.parseDouble(str);
           getOnedividex();
@@ -466,9 +466,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_positiveornegative: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num5 = Double.parseDouble(str);
           getPositiveornegative();
@@ -477,9 +477,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_percent: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num8 = Double.parseDouble(str);
           getPercent();
@@ -488,9 +488,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_divide: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else if (result.getText() != "") {
           num1 = Double.parseDouble(str);
           symbol = "÷";
@@ -507,8 +507,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       case R.id.tv_one:
       case R.id.tv_two:
       case R.id.tv_three: {
-        if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+        if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           if (empty) {
             empty = false;
@@ -525,9 +525,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_time: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else if (result.getText() != "") {
           num1 = Double.parseDouble(str);
           symbol = "x";
@@ -537,9 +537,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_minus: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else if (result.getText() != "") {
           num1 = Double.parseDouble(str);
           symbol = "—";
@@ -549,9 +549,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       break;
       case R.id.tv_plus: {
         if (result.getText() == "") {
-          result.setText("Touch Error Please Restart");
-        } else if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+          result.setText("错误");
+        } else if (result.getText() == "错误") {
+          result.setText("错误");
         } else if (result.getText() != "") {
           num1 = Double.parseDouble(str);
           symbol = "+";
@@ -560,8 +560,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       }
       break;
       case R.id.tv_zero: {
-        if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+        if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           if (empty) {
             empty = false;
@@ -577,8 +577,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       }
       break;
       case R.id.tv_point: {
-        if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+        if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           if (empty) {
             empty = false;
@@ -590,8 +590,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       }
       break;
       case R.id.tv_equal: {
-        if (result.getText() == "Touch Error Please Restart") {
-          result.setText("Touch Error Please Restart");
+        if (result.getText() == "错误") {
+          result.setText("错误");
         } else {
           num2 = Double.parseDouble(str);
           getResult();

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -71,6 +72,7 @@ public class UnitC extends AppCompatActivity {
         String str1 = unit1.getSelectedItem().toString();
         String str2 = unit2.getSelectedItem().toString();
         String str4 = number.getText().toString();
+        int num0;
         switch (id) {
           case R.id.btn_huansuan: {
             if (str3 == "长度") {
@@ -98,7 +100,12 @@ public class UnitC extends AppCompatActivity {
               } else if (str2 == "毫米") {
                 num3 = num2 * 1000;
               }
-              answer.setText("" + num3);
+              num0 = (int) num3;
+              if (num3 % 1 == 0) {
+                answer.setText("" + num0);
+              } else {
+                answer.setText("" + num3);
+              }
             } else if (str3 == "面积") {
               double num4 = Double.parseDouble(str4);
               double num5 = 0, num6 = 0;
@@ -120,7 +127,12 @@ public class UnitC extends AppCompatActivity {
               } else if (str2 == "英亩") {
                 num6 = num5 * 0.0002471;
               }
-              answer.setText("" + num6);
+              num0 = (int) num6;
+              if (num6 % 1 == 0) {
+                answer.setText("" + num0);
+              } else {
+                answer.setText("" + num6);
+              }
             } else if (str3 == "体积") {
               double num7 = Double.parseDouble(str4);
               double num8 = 0, num9 = 0;
@@ -138,7 +150,12 @@ public class UnitC extends AppCompatActivity {
               } else if (str1 == "升") {
                 num9 = num8 / 1000;
               }
-              answer.setText("" + num9);
+              num0 = (int) num9;
+              if (num9 % 1 == 0) {
+                answer.setText("" + num0);
+              } else {
+                answer.setText("" + num9);
+              }
             } else if (str3 == "温度") {
               double num10 = Double.parseDouble(str4);
               double num11 = 0, num12 = 0;
@@ -152,7 +169,12 @@ public class UnitC extends AppCompatActivity {
               } else if (str2 == "华氏度") {
                 num12 = num11 * 1.8 + 32;
               }
-              answer.setText("" + num12);
+              num0 = (int) num12;
+              if (num12 % 1 == 0) {
+                answer.setText("" + num0);
+              } else {
+                answer.setText("" + num12);
+              }
             } else if (str3 == "质量") {
               double num13 = Double.parseDouble(str4);
               double num14 = 0, num15 = 0;
@@ -174,7 +196,12 @@ public class UnitC extends AppCompatActivity {
               } else if (str2 == "磅") {
                 num15 = (num14 / 2.2046) * 1000;
               }
-              answer.setText("" + num15);
+              num0 = (int) num15;
+              if (num15 % 1 == 0) {
+                answer.setText("" + num0);
+              } else {
+                answer.setText("" + num15);
+              }
             }
           }
           break;
@@ -192,6 +219,7 @@ public class UnitC extends AppCompatActivity {
     huansuan = this.findViewById(R.id.btn_huansuan);
     answer = this.findViewById(R.id.tv_answer);
     restart = this.findViewById(R.id.btn_restart);
+    number.setInputType(EditorInfo.TYPE_CLASS_PHONE);
   }
 
   private class SpinnerListener implements android.widget.AdapterView.OnItemSelectedListener {

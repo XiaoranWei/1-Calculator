@@ -12,6 +12,7 @@ public class GongNeng extends AppCompatActivity implements View.OnClickListener 
   private static final String TAG = "GongNeng";
   private Button bankir;
   private Button unitc;
+  private Button house;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +26,13 @@ public class GongNeng extends AppCompatActivity implements View.OnClickListener 
   private void initView() {
     bankir = this.findViewById(R.id.btn_bankir);
     unitc = this.findViewById(R.id.btn_unitc);
+    house = this.findViewById(R.id.btn_house);
   }
 
   private void initClick() {
     bankir.setOnClickListener(this);
     unitc.setOnClickListener(this);
+    house.setOnClickListener(this);
   }
 
   @Override public void onClick(View v) {
@@ -44,6 +47,12 @@ public class GongNeng extends AppCompatActivity implements View.OnClickListener 
       case R.id.btn_unitc:{
         Intent intent=new Intent();
         intent.setClass(GongNeng.this,UnitC.class);
+        startActivity(intent);
+      }
+      break;
+      case R.id.btn_house:{
+        Intent intent=new Intent();
+        intent.setClass(GongNeng.this,House.class);
         startActivity(intent);
       }
       break;

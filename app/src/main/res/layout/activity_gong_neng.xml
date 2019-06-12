@@ -11,28 +11,104 @@
       android:layout_weight="1"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:orientation="vertical"
+      android:orientation="horizontal"
       android:background="#CCCCCC"
-      android:layout_marginRight="20dp"
-      android:layout_marginTop="20dp"
-      android:layout_marginLeft="20dp"
-      android:layout_marginBottom="20dp">
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginLeft="10dp">
     <Button
         android:id="@+id/btn_bankir"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="银行利息"
-        android:textSize="50dp"
-        android:background="#FF3300"/>
+        android:textSize="30dp"
+        android:background="#FF5722"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"/>
     <Button
         android:id="@+id/btn_unitc"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="单位换算"
-        android:textSize="50dp"
-        android:background="#0033FF"/>
+        android:textSize="30dp"
+        android:background="#00BCD4"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_weight="1"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      android:background="#CCCCCC"
+      android:layout_marginRight="10dp"
+      android:layout_marginLeft="10dp">
+    <Button
+        android:id="@+id/btn_house"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="房贷清单"
+        android:textSize="30dp"
+        android:background="#FF9800"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"/>
+    <Button
+        android:id="@+id/btn_uni"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="单"
+        android:textSize="30dp"
+        android:background="#03A9F4"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_weight="1"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      android:background="#CCCCCC"
+      android:layout_marginRight="10dp"
+      android:layout_marginLeft="10dp"
+      android:layout_marginBottom="10dp">
+    <Button
+        android:id="@+id/btn_ban"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="yin"
+        android:textSize="30dp"
+        android:background="#FFC107"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"/>
+    <Button
+        android:id="@+id/btn_un"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="单"
+        android:textSize="30dp"
+        android:background="#3582BE"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"/>
   </LinearLayout>
 
 </LinearLayout>

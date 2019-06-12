@@ -13,76 +13,82 @@
       android:orientation="vertical"
       android:background="#CCCCCC"
       android:layout_marginRight="10dp"
-      android:layout_marginTop="20dp"
-      android:layout_marginLeft="20dp"
-      android:layout_marginBottom="10dp">
+      android:layout_marginTop="5dp"
+      android:layout_marginLeft="10dp"
+      android:layout_marginBottom="5dp">
 
     <TextView
         android:id="@+id/tv_yhlx"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
+        android:layout_weight="1.3"
         android:text="单位换算"
         android:textSize="33sp"
-        android:background="#FFFFFF"
+        android:background="#CDDC39"
         android:gravity="center"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:text="类别"
-        android:textSize="30sp"
         android:background="#FFFFFF"
-        android:gravity="center"/>
+        android:gravity="center|left"/>
     <Spinner
         android:id="@+id/sp_type"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:gravity="center">
     </Spinner>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:background="#FFFFFF"
         android:text="请选择你的单位"
-        android:textSize="30sp"
-        android:gravity="center"/>
+        android:gravity="center|left"/>
     <Spinner
         android:id="@+id/sp_unit1"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:gravity="center">
     </Spinner>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:background="#FFFFFF"
         android:text="请输入你的数目"
-        android:textSize="30sp"
-        android:gravity="center"/>
+        android:gravity="center|left"/>
     <EditText
         android:id="@+id/et_number"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
         android:gravity="center">
     </EditText>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:background="#FFFFFF"
         android:text="请输入你的要转换的单位"
-        android:textSize="30sp"
-        android:gravity="center"/>
+        android:gravity="center|left"/>
     <Spinner
         android:id="@+id/sp_unit2"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:gravity="center">
     </Spinner>
     <Button
         android:id="@+id/btn_huansuan"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:background="#FF8000"
         android:text="换算"
         android:textSize="33dp"
@@ -90,16 +96,17 @@
     <TextView
         android:id="@+id/tv_answer"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:gravity="center"
-        android:textSize="33dp"/>
+        android:textSize="25dp"/>
     <Button
         android:id="@+id/btn_restart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
         android:background="#FF8000"
         android:text="重新开始"
-        android:textSize="20dp"
         android:gravity="center"/>
   </LinearLayout>
 
