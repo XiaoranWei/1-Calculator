@@ -13,6 +13,7 @@ public class GongNeng extends AppCompatActivity implements View.OnClickListener 
   private Button bankir;
   private Button unitc;
   private Button house;
+  private Button scalec;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -27,32 +28,40 @@ public class GongNeng extends AppCompatActivity implements View.OnClickListener 
     bankir = this.findViewById(R.id.btn_bankir);
     unitc = this.findViewById(R.id.btn_unitc);
     house = this.findViewById(R.id.btn_house);
+    scalec = this.findViewById(R.id.btn_scalec);
   }
 
   private void initClick() {
     bankir.setOnClickListener(this);
     unitc.setOnClickListener(this);
     house.setOnClickListener(this);
+    scalec.setOnClickListener(this);
   }
 
   @Override public void onClick(View v) {
     int id = v.getId();
-    switch(id){
-      case R.id.btn_bankir:{
-        Intent intent=new Intent();
-        intent.setClass(GongNeng.this,BankIR.class);
+    switch (id) {
+      case R.id.btn_scalec: {
+        Intent intent = new Intent();
+        intent.setClass(GongNeng.this, ScaleC.class);
         startActivity(intent);
       }
       break;
-      case R.id.btn_unitc:{
-        Intent intent=new Intent();
-        intent.setClass(GongNeng.this,UnitC.class);
+      case R.id.btn_bankir: {
+        Intent intent = new Intent();
+        intent.setClass(GongNeng.this, BankIR.class);
         startActivity(intent);
       }
       break;
-      case R.id.btn_house:{
-        Intent intent=new Intent();
-        intent.setClass(GongNeng.this,House.class);
+      case R.id.btn_unitc: {
+        Intent intent = new Intent();
+        intent.setClass(GongNeng.this, UnitC.class);
+        startActivity(intent);
+      }
+      break;
+      case R.id.btn_house: {
+        Intent intent = new Intent();
+        intent.setClass(GongNeng.this, House.class);
         startActivity(intent);
       }
       break;

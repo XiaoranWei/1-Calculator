@@ -67,7 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="单"
+        android:text="货币兑换"
         android:textSize="30dp"
         android:background="#03A9F4"
         android:layout_marginRight="10dp"
@@ -86,11 +86,11 @@
       android:layout_marginLeft="10dp"
       android:layout_marginBottom="10dp">
     <Button
-        android:id="@+id/btn_ban"
+        android:id="@+id/btn_scalec"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="yin"
+        android:text="进制转换"
         android:textSize="30dp"
         android:background="#FFC107"
         android:layout_marginRight="10dp"

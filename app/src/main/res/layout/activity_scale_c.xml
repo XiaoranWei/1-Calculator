@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".House">
+    tools:context=".ScaleC">
   <LinearLayout
       android:layout_weight="1"
       android:layout_width="match_parent"
@@ -20,63 +20,54 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="房贷清单换算"
+        android:text="进制转换换算"
         android:textSize="33sp"
         android:background="#CDDC39"
         android:gravity="center"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:text="贷款总额(万)"
+        android:layout_weight="0.8"
+        android:text="十进制"
+        android:textSize="30sp"
         android:gravity="center|left"/>
     <EditText
-        android:id="@+id/et_moneyw"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:background="#FFFFFF"
-        android:gravity="center"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:text="还款时间(年)"
-        android:gravity="center|left"/>
-    <EditText
-        android:id="@+id/et_yeary"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:background="#FFFFFF"
-        android:gravity="center"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:text="贷款利率(%)"
-        android:gravity="center|left"/>
-    <EditText
-        android:id="@+id/et_ir"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:background="#FFFFFF"
-        android:gravity="center"/>
-    <Button
-        android:id="@+id/btn_huansuan"
+        android:id="@+id/et_tens"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.8"
-        android:background="#FF8000"
-        android:text="开始计算"
-        android:textSize="25dp"
+        android:textSize="30sp"
+        android:background="#FFFFFF"
         android:gravity="center"/>
     <TextView
-        android:id="@+id/tv_answer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="0.8"
+        android:text="二进制"
+        android:textSize="30sp"
+        android:gravity="center|left"/>
+    <EditText
+        android:id="@+id/et_twos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:textSize="30sp"
+        android:background="#FFFFFF"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:text="十六进制"
+        android:textSize="30sp"
+        android:gravity="center|left"/>
+    <EditText
+        android:id="@+id/et_sixteens"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:textSize="30sp"
+        android:background="#FFFFFF"
         android:gravity="center"/>
     <Button
         android:id="@+id/btn_restart"
@@ -87,6 +78,5 @@
         android:text="重新开始"
         android:textSize="20dp"
         android:gravity="center"/>
-  </LinearLayout>
-
+    </LinearLayout>
 </LinearLayout>
