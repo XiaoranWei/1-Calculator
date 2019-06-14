@@ -43,6 +43,21 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.8"
+        android:text="八进制"
+        android:textSize="30sp"
+        android:gravity="center|left"/>
+    <EditText
+        android:id="@+id/et_eights"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:textSize="30sp"
+        android:background="#FFFFFF"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
         android:text="二进制"
         android:textSize="30sp"
         android:gravity="center|left"/>
@@ -69,14 +84,32 @@
         android:textSize="30sp"
         android:background="#FFFFFF"
         android:gravity="center"/>
-    <Button
-        android:id="@+id/btn_restart"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:background="#FF8000"
-        android:text="重新开始"
-        android:textSize="20dp"
-        android:gravity="center"/>
+        android:layout_weight="0.8"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+      <Button
+          android:id="@+id/btn_restart"
+          android:layout_width="100dp"
+          android:layout_height="match_parent"
+          android:layout_weight="0.8"
+          android:background="#FF8000"
+          android:text="重新开始"
+          android:textSize="20dp"
+          android:layout_marginRight="10dp"
+          android:gravity="center"/>
+      <Button
+          android:id="@+id/btn_huansuan"
+          android:layout_width="100dp"
+          android:layout_height="match_parent"
+          android:layout_weight="0.8"
+          android:background="#FF8000"
+          android:text="换算"
+          android:textSize="20dp"
+          android:layout_marginLeft="10dp"
+          android:gravity="center"/>
+    </LinearLayout>
     </LinearLayout>
 </LinearLayout>
