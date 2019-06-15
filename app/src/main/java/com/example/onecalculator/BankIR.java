@@ -81,7 +81,7 @@ public class BankIR extends AppCompatActivity {
             }
           }
           break;
-          case R.id.btn_restart:{
+          case R.id.btn_restart: {
             money.setText("");
             year.setText("");
             interestrate.setText("");
