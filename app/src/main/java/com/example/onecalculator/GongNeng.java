@@ -15,7 +15,7 @@ public class GongNeng extends AppCompatActivity implements View.OnClickListener 
   private Button house;
   private Button scalec;
   private Button run;
-
+  private Button caroil;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -31,6 +31,7 @@ public class GongNeng extends AppCompatActivity implements View.OnClickListener 
     house = this.findViewById(R.id.btn_house);
     scalec = this.findViewById(R.id.btn_scalec);
     run = this.findViewById(R.id.btn_run);
+    caroil=this.findViewById(R.id.btn_caroil);
   }
 
   private void initClick() {
@@ -39,6 +40,7 @@ public class GongNeng extends AppCompatActivity implements View.OnClickListener 
     house.setOnClickListener(this);
     scalec.setOnClickListener(this);
     run.setOnClickListener(this);
+    caroil.setOnClickListener(this);
   }
 
   @Override public void onClick(View v) {
@@ -73,6 +75,13 @@ public class GongNeng extends AppCompatActivity implements View.OnClickListener 
         intent.setClass(GongNeng.this, Run.class);
         startActivity(intent);
       }
+      break;
+      case R.id.btn_caroil:{
+        Intent intent = new Intent();
+        intent.setClass(GongNeng.this, CarOil.class);
+        startActivity(intent);
+      }
+      break;
     }
   }
 }

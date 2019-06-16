@@ -63,11 +63,11 @@
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"/>
     <Button
-        android:id="@+id/btn_uni"
+        android:id="@+id/btn_caroil"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="货币兑换"
+        android:text="汽车耗油"
         android:textSize="30dp"
         android:background="#03A9F4"
         android:layout_marginRight="10dp"
