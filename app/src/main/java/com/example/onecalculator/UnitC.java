@@ -16,7 +16,7 @@ import android.os.Bundle;
 
 public class UnitC extends AppCompatActivity {
   String[] name1 = {"长度", "面积", "体积", "温度", "质量"};
-  String[] name2 = {"千米", "米", "分米", "厘米", "毫米"};
+  String[] name2 = {"千米", "米", "分米", "厘米", "毫米", "英里"};
   String[] name3 = {"平方千米", "平方米", "公顷", "英亩"};
   String[] name4 = {"立方米", "立方厘米", "升"};
   String[] name5 = {"摄氏度", "华氏度"};
@@ -88,6 +88,8 @@ public class UnitC extends AppCompatActivity {
                 num2 = num1 / 100;
               } else if (str1 == "毫米") {
                 num2 = num1 / 1000;
+              } else if (str1 == "英里") {
+                num2 = num1 * 1609.344;
               }
               if (str2 == "千米") {
                 num3 = num2 / 1000;
@@ -99,6 +101,8 @@ public class UnitC extends AppCompatActivity {
                 num3 = num2 * 100;
               } else if (str2 == "毫米") {
                 num3 = num2 * 1000;
+              } else if (str2 == "英里") {
+                num3 = num2 / 1609.344;
               }
               num0 = (int) num3;
               if (num3 % 1 == 0) {

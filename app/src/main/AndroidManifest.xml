@@ -9,6 +9,10 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
+    <activity android:name=".AirType">
+    </activity>
+    <activity android:name=".Constellation">
+    </activity>
     <activity android:name=".CarOil">
     </activity>
     <activity android:name=".Run">

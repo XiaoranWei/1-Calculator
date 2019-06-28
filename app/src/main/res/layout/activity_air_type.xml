@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CarOil">
+    tools:context=".AirType">
 
   <LinearLayout
       android:layout_weight="1"
@@ -26,98 +26,73 @@
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:gravity="center"
-          android:text="汽车耗油换算"
+          android:text="飞机各大机型信息"
           android:textSize="33sp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5">
-      <TextView
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:gravity="center|left"
-          android:text="即上次加满油后行驶"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.6"
-        android:background="#FFFFFF">
-      <EditText
-          android:id="@+id/et_kkmeter"
-          android:layout_width="0dp"
-          android:layout_height="match_parent"
-          android:layout_weight="4"
-          android:gravity="center|right"/>
-      <TextView
-          android:layout_width="0dp"
-          android:layout_height="match_parent"
-          android:layout_weight="1"
-          android:gravity="center"
-          android:text="公里"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5">
-      <TextView
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:gravity="center|left"
-          android:text="油箱加满油量"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.6"
-        android:background="#FFFFFF">
-      <EditText
-          android:id="@+id/et_liter"
-          android:layout_width="0dp"
-          android:layout_height="match_parent"
-          android:layout_weight="4"
-          android:gravity="center|right"/>
-      <TextView
-          android:layout_width="0dp"
-          android:layout_height="match_parent"
-          android:layout_weight="1"
-          android:gravity="center"
-          android:text="公升"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5">
-      <TextView
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:gravity="center|left"
-          android:text="油价/公升"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.6"
-        android:background="#FFFFFF">
-      <EditText
-          android:id="@+id/et_yuan"
-          android:layout_width="0dp"
-          android:layout_height="match_parent"
-          android:layout_weight="4"
-          android:gravity="center|right"/>
-      <TextView
-          android:layout_width="0dp"
-          android:layout_height="match_parent"
-          android:layout_weight="1"
-          android:gravity="center"
-          android:text="元"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="0.8"
+        android:background="#CCCCCC">
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="飞机公司"/>
+      <Spinner
+          android:id="@+id/sp_aircom"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="3"
+          android:gravity="center">
+      </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:background="#FFFFFF">
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="飞机型号"/>
+      <Spinner
+          android:id="@+id/sp_airtype"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="3"
+          android:gravity="center">
+      </Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:background="#CCCCCC">
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="飞机型号(详)"/>
+      <Spinner
+          android:id="@+id/sp_airtypeex"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="3"
+          android:gravity="center">
+      </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
       <Button
           android:id="@+id/btn_restart"
           android:layout_width="0dp"
@@ -130,12 +105,12 @@
           android:layout_marginBottom="5dp"
           android:layout_marginLeft="5dp"/>
       <Button
-          android:id="@+id/btn_huansuan"
+          android:id="@+id/btn_check"
           android:layout_width="0dp"
           android:layout_height="match_parent"
           android:layout_weight="1"
           android:background="#FF8000"
-          android:text="换算"
+          android:text="查看"
           android:layout_marginRight="5dp"
           android:layout_marginTop="5dp"
           android:layout_marginBottom="5dp"
@@ -145,13 +120,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2.5"
+        android:layout_weight="1.2"
         android:orientation="vertical">
       <TextView
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:gravity="center"
-          android:id="@+id/tv_answer"/>
+          android:id="@+id/tv_answerone"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:id="@+id/tv_answertwo"/>
     </LinearLayout>
 
   </LinearLayout>

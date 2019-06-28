@@ -71,7 +71,7 @@ public class CarOil extends AppCompatActivity {
                 + "公升\n"
                 + "每一公里需"
                 + df.format(num6)
-                + "元");
+                + "元\n"+"提示：发动车前提前预热、减少急刹车次数、高速时使用定时巡航都能有效减少耗油量");
           }
           break;
           case R.id.btn_restart: {

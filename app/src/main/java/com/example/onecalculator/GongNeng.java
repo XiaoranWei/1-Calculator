@@ -16,6 +16,8 @@ public class GongNeng extends AppCompatActivity implements View.OnClickListener 
   private Button scalec;
   private Button run;
   private Button caroil;
+  //private Button airtype;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -31,7 +33,8 @@ public class GongNeng extends AppCompatActivity implements View.OnClickListener 
     house = this.findViewById(R.id.btn_house);
     scalec = this.findViewById(R.id.btn_scalec);
     run = this.findViewById(R.id.btn_run);
-    caroil=this.findViewById(R.id.btn_caroil);
+    caroil = this.findViewById(R.id.btn_caroil);
+    //airtype = this.findViewById(R.id.btn_airtype);
   }
 
   private void initClick() {
@@ -41,11 +44,18 @@ public class GongNeng extends AppCompatActivity implements View.OnClickListener 
     scalec.setOnClickListener(this);
     run.setOnClickListener(this);
     caroil.setOnClickListener(this);
+    //airtype.setOnClickListener(this);
   }
 
   @Override public void onClick(View v) {
     int id = v.getId();
     switch (id) {
+      //case R.id.btn_airtype: {
+      //  Intent intent = new Intent();
+      //  intent.setClass(GongNeng.this, AirType.class);
+      //  startActivity(intent);
+      //}
+      //break;
       case R.id.btn_scalec: {
         Intent intent = new Intent();
         intent.setClass(GongNeng.this, ScaleC.class);
@@ -70,13 +80,13 @@ public class GongNeng extends AppCompatActivity implements View.OnClickListener 
         startActivity(intent);
       }
       break;
-      case R.id.btn_run:{
+      case R.id.btn_run: {
         Intent intent = new Intent();
         intent.setClass(GongNeng.this, Run.class);
         startActivity(intent);
       }
       break;
-      case R.id.btn_caroil:{
+      case R.id.btn_caroil: {
         Intent intent = new Intent();
         intent.setClass(GongNeng.this, CarOil.class);
         startActivity(intent);
